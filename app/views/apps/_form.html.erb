@@ -1,0 +1,15 @@
+
+<%=form_for @app do |f| %>
+    <%=f.label :estado%><br>
+    <%=f.text_field :estado%>
+    <div class="error">
+        <%=@app.errors[:estado].first%>        
+    </div>
+    <br>
+
+    <%=f.file_field :image%>
+
+    <br>
+
+    <%= f.submit 'Aceptar', class: 'btn' %>
+<%end%>

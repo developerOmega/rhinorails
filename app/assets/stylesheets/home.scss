@@ -1,0 +1,112 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.datos{
+    background: #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+
+/*--------------------------------------------------------------*/
+/*Formularios de registro*/
+/*--------------------------------------------------------------*/
+
+.formularios{
+    padding: 20px;
+    background: #f1f1f2;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.formularios .iniciar, .formularios .registrar{
+    background: #161a18;
+    color:#AAAAAA;
+    padding: 20px;
+    border-radius: 5px;
+    width: 30%;
+}
+
+.formularios div form div input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border:none;
+    border-bottom: 1px solid #AAAAAA;
+    border-radius: none;
+    background: #161a18;
+    color:#AAAAAA;
+}
+
+.formularios div form div input[type = 'checkbox']{
+    width: 20px;
+}
+
+.formularios div form .recordar{
+    display: flex;
+}
+
+.formularios div form div input[type = 'submit']{
+    border:none;
+    margin:10px auto;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #AAAAAA;
+
+    transition: all .3s ease;
+}
+
+.formularios div form div input[type = 'submit']:hover{
+    background: #AAAAAA;
+    color: #161a18;
+}
+
+/*--------------------------------------------------------------*/
+/*Olvidar contraeña*/
+/*--------------------------------------------------------------*/
+.olvidar{
+    background: #161a18;
+    color: #AAAAAA;
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    width: 50%;
+    border-radius: 5px;
+}
+
+.olvidar form  input[type = 'email']{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 5px;
+    background: #161a18;
+    border:none;
+    border-bottom: 1px solid #AAAAAA;
+    color: #AAAAAA;
+}
+
+.olvidar form  input[type = 'submit']{
+    width: 70%;
+    padding: 5px;
+    border:none;
+    border-radius: 5px;
+    background: #161a18;
+    color: #AAAAAA;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.olvidar form  input[type = 'submit']:hover{
+    background: #AAAAAA;
+    color: #161a18;
+}
+
+
+

@@ -1,0 +1,21 @@
+<div class="publicacion">
+
+    <div class="estado">
+        <%=app.estado%>
+    </div>
+    <div class="imagen">
+
+        <% if app.image.url %> 
+            <%= image_tag app.image.medium.url, class: 'foto'%>
+        <% end %>
+    </div>
+    <div class="modificar">
+        <%=link_to edit_app_path(app) do%>
+            <%=fa_icon "edit"%>
+        <% end %>
+        <%=link_to  app, method: :delete, data: {confirm: '¿Esta seguro de eliminar?'} do%>
+            <%=fa_icon "trash"%>
+        <% end %>
+    </div>
+        
+</div>

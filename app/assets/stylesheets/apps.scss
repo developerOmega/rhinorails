@@ -1,0 +1,300 @@
+// Place all the styles related to the apps controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+*{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.contenedor{
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    
+    background: #f1f1f2;
+}
+
+/*---------------------------------------------------------------------------*/
+/*publicaciones*/
+/*---------------------------------------------------------------------------*/
+
+.publicacion{
+    background: #161a18;
+    color: #AAAAAA;
+    width: 80%;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.publicacion .estado, .publicacion .modificar{
+    margin: 10px 0;
+}
+
+.publicacion .modificar a{
+    color: #AAAAAA;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.formulario{
+    background: #161a18;
+    color: #AAAAAA;
+    width: 80%;
+    text-align: center;
+    padding: 5px;
+    margin: auto;
+    border-radius: 5px;
+}
+
+form label{
+    padding: 5px;
+    display: block;
+}
+
+form input[type = 'text']{
+    width: 90%;
+    margin: 5px;
+    border:none;
+    border-radius: 5px;
+    padding: 10px;
+}   
+
+form .btn{
+    display: block;
+    margin: auto;
+    border:none;
+    width: 30%;
+    padding: 5px;
+    border-radius: 5px;
+    background: #161a18;
+    color: #aaaaaa;
+    cursor: pointer;
+
+    transition: all .3s ease;
+}
+
+form .btn:hover{
+    background: #AAAAAA;
+    color: #161a18;
+}
+
+.error{
+    background:#cc192a;
+    width: 30%;
+    border-radius: 10px;
+    margin: auto;
+    color: #fff;
+}
+
+.imagen { 
+    border-top: 1px solid #AAAAAA;
+}
+
+.foto{
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+    border-radius: 5px; 
+}
+
+/*---------------------------------------------------------------------------*/
+/*incio*/
+/*---------------------------------------------------------------------------*/
+
+/*---------------------------------HEADER-------------------------------*/
+header{
+    background: #AAAAAA;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header a{
+    margin: 10px;
+    text-decoration: none;
+    color: #161a18;
+
+    transition: all .3s ease;
+}
+
+header a:hover{
+    color: #f1f1f2;
+}
+
+
+header .logo{
+    margin-left: 45%;
+}
+
+header .logo img{
+    display: block;
+}
+
+/*---------------------------------BANER-------------------------------*/
+.contenedorHome{
+    width: 100%;
+    max-width: 2000px;
+    margin: auto;
+
+    background: url(/assets/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+.banner{
+    
+    width: 100%;
+    height: 650px;
+    
+}
+
+.banner .marco{
+    background: rgba(0,0,0,.2);
+    width: 100%;
+    height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    transition: all .5s ease;
+}
+
+.banner .marco:hover{
+    background: rgba(0,0,0,.4)
+}
+
+.banner .marco .texto{
+    width: 600px;
+    height: 180px;
+    margin: auto;
+    color: #f1f1f2;
+    
+    
+    border-radius: 80px;
+
+    background: url(/assets/logohover.png);
+
+    
+    
+    background-size: cover;
+    background-position: center;
+    transition:all  1s ease;
+}
+
+.banner .marco .texto:hover{
+    box-shadow: 3px 1px 3px 3px #161a18;
+}
+
+
+/*---------------------------------Instrucciones-------------------------------*/
+.main .instrucciones{
+    background: #f1f1f2;
+    color: #AAAAAA;
+    padding: 20px;
+}
+
+.main .instrucciones h3,.main .instrucciones h4,.main .instrucciones ul{
+    text-align: center;
+    padding: 25px;
+}
+
+.main .instrucciones h3{
+    font-size: 30px;
+    color: #161a18;
+}
+
+.main .instrucciones h4{
+    font-size: 25px;
+    
+}
+
+.main .instrucciones ul{
+    list-style: none;
+}
+
+.main .instrucciones ul li{
+    padding: 20px;
+    font-size: 20px;
+}
+
+/*---------------------------------Galeria-------------------------------*/
+.main .galeria{
+    background: rgba(0, 0, 0,.8);
+    padding: 25px;
+    margin: auto 50px;
+    border-radius: 10px;
+    text-align: center;
+    //justify-content: space-around;
+}
+
+.main .galeria h3{
+    color: #AAAAAA;
+    font-size: 30px;
+}
+
+.main .galeria div{
+    display: flex;
+    flex-direction: column;
+}
+
+.main .galeria img{
+    display: block;
+    width: 30%;
+    flex:1;
+    margin: 20px auto;
+
+    
+    border-radius: 5px;
+}
+
+.main .galeria img:nth-child(2){
+    width: 70%;
+    
+}
+
+/*---------------------------------Footer-------------------------------*/
+footer{
+    background: #161a18;
+    color: #AAAAAA;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+footer .redes, footer .correo{
+    border:1px solid #AAAAAA;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+
+footer .redes h3{
+    text-align: center;
+    margin: 10px;
+}
+
+footer .redes div a{
+    color: #AAAAAA;
+    margin: 5px;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 700px){
+    .banner{
+        display: none;
+    }
+}

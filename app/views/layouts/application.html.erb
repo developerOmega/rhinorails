@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Proyrails</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+  <header>
+    <div class="logo">
+      <img src="/assets/logo.png" width="50px;">
+    </div>
+
+    <% if user_signed_in? %>
+
+      <%= link_to 'Salir', destroy_user_session_path, method: :delete%>
+    <% else %>
+      <%= link_to 'Iniciar sesion/Registrarse', new_user_session_path %>
+    <% end %>
+  </header>
+
+  <div>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <%= yield %>
+  </div>
+
+  <footer>
+    <div class="redes">
+      <h3>Mis redes ...</h3>
+      <div>
+        <a target="_blank" href="https://www.facebook.com/danjeisen.afdt"><%=fa_icon "facebook-square"%></li></a>
+        <a target="_blank" href="https://twitter.com/elskip100"><%=fa_icon "twitter-square"%></a>
+        <a target="_blank" href="https://github.com/developerOmega"><%=fa_icon "github"%></a>
+        <a target="_blank" href="https://www.linkedin.com/in/daniel-mendoza-99b592172/"><%=fa_icon "linkedin-square"%></a>
+      </div> 
+      
+    </div>
+
+    <div class="correo">
+        <p>Daniel Mendoza:</p>
+        <p>theskip98@gmail.com</p>
+    </div>
+  </footer>
+    
+  </body>
+</html>

@@ -1,0 +1,81 @@
+
+<% if user_signed_in? %>
+
+    <div class="contenedor">
+        <div class="datos">
+            <div class="imagenPerfil">
+
+            </div>
+
+            <div class="datosPersona">
+                <h2><%= current_user.nombre %> </h2>
+                <p><strong> <%=@apps.length%> </strong> publicaciones</p>
+                        
+            </div>
+        </div>
+
+        <div class="formulario">
+            <%=form_for @app do |f| %>
+                <%=f.label :estado%><br>
+                <%=f.text_field :estado%>
+                <div class="error">
+                    <%=@app.errors[:estado].first%>        
+                </div>
+                <br>
+            
+                <%=f.file_field :image%>
+            
+                <br>
+            
+                <%= f.submit 'Aceptar', class: 'btn' %>
+            <%end%>
+        </div>
+
+        <%= render @apps%>
+    </div>
+        
+
+<% else %>
+    <div class="contenedorHome">
+        <div class="banner">
+            <div class="marco">
+                <div class="texto">
+                    
+                </div>
+            </div>
+        </div>
+    
+        <div class="main">
+            <div class="instrucciones">
+                <h3>Rhino Rails es una red social dedicada a la publicación 
+                    de Microblogging, es una nueva alternativa para los usuarios.</h3>
+                
+                <h4>Ingresar en tres pasos:</h4>
+                
+                <ul>
+                    <li> <%=fa_icon "mouse-pointer"%> Ingresa a ‘Iniciar sesion/Registrarse’.</li>
+                    <li> <%=fa_icon "sign-in"%> Inicia sesión o registrare.</li>
+                    <li> <%=fa_icon "retweet"%> Comparte tu día a día con el mundo.</li>
+                </ul>
+            </div>
+
+            <div class="galeria">
+                <h3>Una nueva alternativa.</h3>
+                <div>
+                    <img src="/assets/cell1.png" width="300">
+                    <img src="/assets/cell2.png" width="300">
+                </div>
+                
+            </div>
+
+            <div class="animacion">
+                <div class="animacion"></div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+<% end %>
+

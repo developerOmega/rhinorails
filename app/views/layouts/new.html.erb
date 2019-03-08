@@ -1,0 +1,8 @@
+<p>Nuevo estado</p>
+
+<%=form_for :apps, url: apps_path do |f| %>
+    <%=f.label :estado%><br>
+    <%=f.text_field :estado%>
+    <br>
+    <%=f.submit%>
+<%end%>
